@@ -1,7 +1,6 @@
 package com.android.currencyconverter.main
 
 import androidx.hilt.lifecycle.ViewModelInject
-import androidx.lifecycle.ServiceLifecycleDispatcher
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.android.currencyconverter.data.models.Rates
