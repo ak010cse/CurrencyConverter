@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+
+    <string-array name="currency_codes">
+        <item>AED</item>
+        <item>AFN</item>
+        <item>ALL</item>
+        <item>INR</item>
+
+    </string-array>
+</resources>
