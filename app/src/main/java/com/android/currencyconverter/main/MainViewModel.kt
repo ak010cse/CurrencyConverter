@@ -67,16 +67,16 @@ class MainViewModel @Inject constructor(
         "AFN" -> rates.AFN
         "ALL" -> rates.ALL
         "INR" -> rates.INR
+        "AMD" -> rates.AMD
+        "ANG" -> rates.ANG
+        "AOA" -> rates.AOA
+        "ARS" -> rates.ARS
+        "AUD" -> rates.AUD
+        "AWG" -> rates.AWG
+        "AZN" -> rates.AZN
+        "BAM" -> rates.BAM
 
-           /* val ALL: Double,
-            val AMD: Double,
-            val ANG: Double,
-            val AOA: Double,
-            val ARS: Double,
-            val AUD: Double,
-            val AWG: Double,
-            val AZN: Double,
-            val BAM: Double,
+           /*
             val BBD: Double,
             val BDT: Double,
             val BGN: Double,
