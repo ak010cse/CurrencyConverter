@@ -1,6 +1,5 @@
 package com.android.currencyconverter.main
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.android.currencyconverter.data.models.Rates
@@ -41,14 +40,14 @@ class MainViewModel @Inject constructor(
 
         viewModelScope.launch(dispatchers.io) {
             _conversion.value = CurrencyEvent.Loading
-
+            _conversion.value = CurrencyEvent.Error(" ")
             when (val ratesResponse = repository.getRates(fromCurrency)) {
                 is Resource.Error -> _conversion.value =
                     CurrencyEvent.Error(ratesResponse.message!!)
 
                 is Resource.Success -> {
                     val rates = ratesResponse.data!!.rates
-                    val rate= getRateForCurrency(toCurrency,rates)
+                    val rate= rates?.let { getRateForCurrency(toCurrency, it) }
 
                     if (rate==null){
 
